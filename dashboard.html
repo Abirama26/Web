@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init({
+        publicKey: "3sg5BG5Y6wMgonZUV",
+      });
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- First Quadrant: Received Data Table -->
+    <div class="quadrant" id="data-table-container">
+      <h3>Received Data</h3>
+      <table id="data-table" class="data-table">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>MQ2</th>
+            <th>Stability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Second Quadrant: MQ2 Graph -->
+    <div class="quadrant" id="mq2-graph-container">
+      <h3>MQ2 Graph</h3>
+      <canvas id="mq2-chart"></canvas>
+    </div>
+
+    <!-- Third Quadrant: Temperature & Humidity Graph -->
+    <div class="quadrant" id="temp-humidity-graph-container">
+      <h3>Temperature & Humidity</h3>
+      <canvas id="temp-humidity-chart"></canvas>
+    </div>
+
+    <!-- Fourth Quadrant: Panic Action -->
+    <div class="quadrant" id="panic-action-container">
+      <h3>Panic Action</h3>
+      <div id="panic-status">
+        <p>Stable</p>
+      </div>
+    </div>
+
+    <!-- Fifth Quadrant: Latitude and Longitude Values -->
+    <div class="quadrant" id="lat-lon-container">
+      <h3>Location</h3>
+      <div id="location-status">
+        <p>Latitude: <span id="latitude-value"></span></p>
+        <p>Longitude: <span id="longitude-value"></span></p>
+      </div>
+    </div>
+
+    <!-- Sixth Quadrant: Connect to Arduino Button -->
+    <div class="quadrant" id="connect-container">
+      <h3>Connect to Arduino</h3>
+      <button class="connect-btn" id="connect-btn">Connect to Arduino</button>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Set up a full-screen background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('hatch.jpg.jpg'); /* Change this to the path of your image */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  /* Center the login form */
+  .login-container {
+    background: rgba(0, 0, 0, 0.7); /* Transparent black background for form */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .login-container:hover {
+    transform: rotateY(10deg);
+  }
+  
+
+  h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  
+  .input-group {
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .input-group input {
+    width: 70%; /* Adjust this percentage as needed */
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #00c8ff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  /* 3D effect on input focus */
+  .input-group input:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 200, 255, 0.6);
+  }
+  
+  /* Style for the login button */
+  .login-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #00c8ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+  
+  /* Hover effect for the login button */
+  .login-btn:hover {
+    background-color: #0098cc;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 200, 255, 0.5);
+  }
+  
+  .login-btn:active {
+    transform: scale(0.98);
+  }
+  
+  .error-msg {
+    color: red;
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  /* Add some responsiveness */
+  @media screen and (max-width: 768px) {
+    .login-container {
+      width: 80%;
+    }
+    .input-group input {
+      padding: 12px;
+      font-size: 16px;
+    }
+    .login-btn {
+      padding: 12px 24px;
+      font-size: 18px;
+    }
+  }
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="landing.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>LoRa-Powered Helmets for Mining Protection</h1>
+    <h2>Login to Your Account</h2>
+
+    <!-- Username input -->
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Enter Username">
+    </div>
+
+    <!-- Password input -->
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Enter Password">
+    </div>
+
+    <!-- Login Button -->
+    <button class="login-btn" onclick="validateLogin()">Login</button>
+
+    <!-- Error message -->
+    <div class="error-msg" id="error-msg">Invalid username or password</div>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === 'abi' && password === '12345') {
+        // Redirect to another page or dashboard
+        window.location.href = 'dashboard.html'; // Replace with your dashboard page
+      } else {
+        document.getElementById('error-msg').style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
